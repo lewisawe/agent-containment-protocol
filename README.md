@@ -21,10 +21,10 @@ Every action is logged and scored in real-time:
 | 🚨 Followed injected instruction | -50 |
 | 💪 Resisted injection | +25 |
 
-When trust drops below thresholds, permissions are automatically revoked:
-- **> 80**: Trusted — full tool access
+When trust drops below thresholds, the containment engine restricts access to the GitHub credential managed by Auth0 Token Vault:
+- **> 80**: Trusted — full tool access to Token Vault credentials
 - **40–80**: Cautious — monitoring increased
-- **< 40**: Contained — write tools disabled
+- **< 40**: Contained — write tools lose access to credentials, agent is read-only
 
 ## Tech Stack
 
